@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Fibonacci{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Sucesión de Fibonacci  </h1>
+</div>
+
+<p>
+    Este método devuelve el número n-ésimo de la sucesión de Fibonacci.
+</p>
+
+
+<form action="" method="POST">
+    <div class="form-group">
+      <label for="lista">Introducir la posición del elemento de la sucesión de Fibonacci que deseas obtener:</label>
+      <input type="number" min="1" class="form-control w-25" name="n" id="n">
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+
+  <br/><br/><br/>
+   <h3 style="color: rgb(226, 13, 13);">Resultado: </h3>
+   <input class="resultados" type="text" name="resultado" id="resultado" value="{{ fibo }}">
+
+</form><br />
+
+
+
+{% endblock %}

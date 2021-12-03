@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Corchetes{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Cadenas balanceadas</h1>
+</div>
+
+<p>
+    En esta sección comprobamos si una cadena de "[" y "]" está balanceda, es decir, que se componga de parejas de corchetes de apertura y cierre correctamente anidados.
+</p>
+
+
+<form action="" method="POST">
+    <div class="form-group">
+        <label for="lista">Introducir cadena de corchetes:</label>
+        <input type="text" class="form-control w-25" name="cadena" id="cadena">
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+
+  <br/><br/><br/>
+   <h3 style="color: rgb(226, 13, 13);">Resultado: </h3>
+   <input class="resultados" type="text" name="resultado" id="resultado" value="{{ result }}">
+
+</form><br />
+
+
+
+{% endblock %}

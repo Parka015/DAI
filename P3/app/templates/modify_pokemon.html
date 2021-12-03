@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block title %}Modificar Pokemon de la Mongo DB{% endblock %}
+
+{% block content %}
+<form action="mongodb" method="post">
+    <label>Number <input type="text" name="number_pokemon" id="number_pokemon" value="{{ pokemon['num'] }}"></label>
+    <label>Name <input type="text" name="name_pokemon" id="name_pokemon" value="{{ pokemon['name'] }}"></label>
+    <label>Image url <input type="url" name="img_pokemon" id="img_pokemon" value="{{ pokemon['img'] }}"></label>
+    <label>Type <input type="text" name="type_pokemon" id="type_pokemon" value="{{ pokemon['type'] }}"></label>
+    <label>Weaknesses <input type="text" name="weakness_pokemon" id="weakness_pokemon" value="{{ pokemon['weaknesses'] }}"></label>
+    <input type="hidden" name="updated" value="{{ pokemon['name'] }}">
+    <input type="submit" value="Update">
+</form>
+{% endblock %}

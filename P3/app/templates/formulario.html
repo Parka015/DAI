@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Pokemons en Mongo DB{% endblock %}
+
+{% block content %}
+<label><strong>Para buscar a un Pokemons por su nombre, tipo o debilidad: </strong>
+    <form action="find"  method="get"><input type="submit"  value="Search"></form>
+</label>
+</br>
+<label><strong>Para añadir un nuevo Pokemon: </strong>
+    <form action="insert_pokemon"  method="get"><input type="submit"  value="Añadir Pokemon"></form>
+</label>
+
+    {% if no_exists %}
+        <h2>{{ no_exists }}</h2>
+    {% else %}
+
+        <table>
+            <tr class="bd_tr">
+                <th> Image  </th>
+                <th> Name </th>
+                <th> Type </th>
+                <th> Weaknesses </th>
+                <th> Modify  </th>
+                <th> Delete </th>
+            </tr>
+            {% for fila in tabla %}
+            <tr class="bd_tr">
+                <td><img src="{{ fila['img'] }}" width="100" height="100"></td>
+                <td>{{ fila['name'] }}</td>
+                <td>{{ fila['type'] }}</td>
+                <td>{{ fila['weaknesses'] }}</td>
+                <td><form action="modify_pokemon" method="post">
+                    <input type="hidden" name="name_pokemon" value="{{ fila['name'] }}">
+                    <input type="submit" value="Modify"></form>
+                </td>
+                <td><form action="delete_pokemon" method="post">
+                    <input type="hidden" name="name_pokemon" value="{{ fila['name'] }}">
+                    <input type="submit" value="Delete"></form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+{% endblock %}

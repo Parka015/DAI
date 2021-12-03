@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Búsqueda en Pokemons{% endblock %}
+
+{% block content %}
+<h3>Nota de uso:</h3>
+<p>Puedes buscar por distintas caracteristicas de los pokemons (nombre, tipo o debilidad)</p>
+<p>Se buscarán todos los elementos que empiecen por dicho valor en la caracteristica (No tiene que preocuparse de las mayusculas o minusculas)</p>
+<!--<p>Tambien se puede buscar que contengan varios valores a la vez dicha caracteristica (no introducir espacios entre los valores y las comas)</p>-->
+
+<form action="mongodb" method="post">
+    <label for="caracteristica">¿Por qué característica deseas buscar?</label>
+    <select name="caracteristica", id="caracteristica">
+        <option>Name</option>
+        <option>Type</option>
+        <option>Weaknesses</option>
+    </select>
+    <br/>
+    <label> Introduce el valor que debe tomar dicha caracteristica <input type="text" name="busqueda" id="busqueda" placeholder="valor"></label>
+    <input type="submit" name="search" id="search" value="Search">
+</form>
+{% endblock %}

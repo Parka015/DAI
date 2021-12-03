@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+
+{% block title %}Añadir Pokemon a Mongo DB{% endblock %}
+
+{% block content %}
+<form action="mongodb" method="post">
+    <label>Number <input type="text" name="number_pokemon" id="number_pokemon"></label>
+    <label>Name <input type="text" name="name_pokemon" id="name_pokemon"></label>
+    <label>Image url <input type="url" name="img_pokemon" id="img_pokemon"></label>
+    <label>Type <input type="text" name="type_pokemon" id="type_pokemon"></label>
+    <label>Weaknesses <input type="text" name="weakness_pokemon" id="weakness_pokemon"></label>
+    <input type="submit" name="added" id="added" value="Añadir Pokemon">
+</form>
+{% endblock %}

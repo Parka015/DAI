@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Login</h1>
+</div>
+
+{% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+{% endif %}
+
+
+<form action="" method="POST">
+    <dl>
+        <dt>Username:
+        <dd><input type=text name=username id=username value="{{request.form.username }}">
+        <dt>Password:
+        <dd><input type=password name=password id=password>
+      </dl>
+      <p><input type=submit value=Login>
+
+
+</form><br />
+
+
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+body{
+	background-color: #4B0082;
+	color: white;
+}
+
+
+h1{
+	color: white;
+	text-align: center;
+	text-decoration: underline;
+}
+
+
+li{
+	margin-bottom: 20px;
+	
+}
+
+a, a:active, a:visited{
+	color: #87CEFA;
+}
+
+
+.error{
+	color: red;
+	text-decoration: underline;
+}
+
+a:hover{
+	color:#C71585;
+}
+
+img{
+	display:block;
+	margin: auto;
+	width: 1200px;
+

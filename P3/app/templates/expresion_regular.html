@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Expresión Regular{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Expresión Regular</h1>
+</div>
+
+<p>
+    Esta sección se encarga de identificar palabras seguidas de un espacio y una única letra mayúscula (por ejemplo: Apellido N), correos electrónicos válidos o números de tarjeta de crédito cuyos dígitos estén separados por - o espacios en blanco cada
+  paquete de cuatro dígitos.
+</p>
+
+
+<form action="" method="POST">
+    <div class="form-group">
+        <label for="lista">Introducir cadena la cadena:</label>
+        <input type="text" class="form-control w-25" name="expresion" id="expresion">
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+
+  <br/><br/><br/>
+   <h3 style="color: rgb(226, 13, 13);">Resultado: </h3>
+   <input class="resultados" type="text" name="resultado" id="resultado" value="{{ result }}">
+
+</form><br />
+
+
+
+{% endblock %}

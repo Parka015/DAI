@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+{% block title %}Create account{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Create account</h1>
+  </div>
+
+  <form action="" method="POST">
+    <dl>
+        <dt>Username:
+        <dd><input type=text name=username id=username value="{{request.form.username }}">
+        <dt>Password:
+        <dd><input type=password name=password id=password>
+        <dt>Nombre:
+        <dd><input type=text name=nombre id=nombre >
+        <dt>Apellidos:
+        <dd><input type=text name=apellidos id=apellidos >
+        <dt>Email:
+        <dd><input type=email name=email id=email>
+      </dl>
+      <p><input type=submit value="Confirm">
+
+</form><br />
+
+
+
+
+{% endblock %}

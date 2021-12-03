@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!--Vista del perfil-->
+
+			<div class="col-md-6">
+				<div class="bio-content">
+					<h1>Perfil de {{ perfil['User'] }}</h1>
+
+					<hr>
+					<ul class="container details">
+						<li> <strong>Nombre: </strong><span class="fas fa-envelope" style="width:50px;"></span>{{ perfil['Nombre'] }}</li>
+						<li> <strong>Apellidos: </strong><span class="fas fa-envelope" style="width:50px;"></span>{{ perfil['Apellidos'] }}</li>
+						<li> <strong>Correo: </strong><span class="fas fa-envelope" style="width:50px;"></span>{{ perfil['Email'] }}</li>
+					</ul>
+					<hr>
+					<div class="d-flex justify-content-center mt-5 login_container">
+						<button class="nav-link" onclick="location.href='/modificarPerfil'">Modificar perfil</button>
+					</div>
+				</div>
+			</div>
+
+
+
+{% endblock %}
